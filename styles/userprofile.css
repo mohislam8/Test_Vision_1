@@ -1,0 +1,593 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: separate; /* Use separate borders */
+    border-spacing: 0 10px; /* Adds space between rows */
+    background-color: #f8f8f8;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+
+}
+
+table th {
+    background-color: #01b5d9;
+    color: white;
+}
+
+table tr {
+    background-color: white;
+
+}
+
+table tr:not(:last-child) {
+    margin-bottom: 10px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for row separation */
+}
+
+table td a {
+    text-decoration: none;
+    color: #01b5d9;
+}
+
+.table-icon {
+    cursor: pointer;
+    margin-right: 5px; /* Adjust as needed */
+
+}
+/* Table styling End */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height:60px;
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.user-info {
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+.user-info1 {
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+
+    background: rgb(8, 189, 235);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+button img {
+    width: 25px;
+    height: 25px;
+}
+
+
+label {
+    font-weight: bold;
+    text-align: left;
+    display: block; /* Ensures the label takes up the full width */
+}
+
+
+#username {
+    background-color: #e0f7fa;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#datetime {
+    margin-left: 10px;
+}
+
+#patient-id {
+    width: 250px;
+    height: 13px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-left: 100px;
+    border-radius: 5px;
+    text-align:left;
+}
+
+button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#previous {
+   
+    width: 100px;
+    height: 36px;
+    
+}
+#next {
+    
+    width: 100px;
+    height: 36px;
+}
+
+button img {
+    width: 25px;
+    height: 25px;
+}
+
+button:hover {
+    background-color: #0097a7;
+    
+}
+.add-patient-btn {
+    width: 200px;
+    height: 36px;
+    left: 2%;
+    color: white; /* Ensures the text color is white */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    border: none; /* Removes the default button border */
+    border-radius: 5px; /* Adds rounded corners */
+    cursor: pointer; /* Adds a pointer cursor on hover */
+    font-size: 16px; /* Sets the font size */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Ensures text alignment */
+}
+.add-patient-btn1 {
+    width: 150px;
+    height: 36px;
+    left: 3%;
+    background-color: #487175;
+    color: white; /* Ensures the text color is white */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    border: none; /* Removes the default button border */
+    border-radius: 5px; /* Adds rounded corners */
+    cursor: pointer; /* Adds a pointer cursor on hover */
+    font-size: 16px; /* Sets the font size */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Ensures text alignment */
+}
+.add-patient-btn2 {
+    background-color: #6c757d;
+    left: 8%;
+    width: 150px;
+    height: 36px;
+    color: white; /* Ensures the text color is white */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    border: none; /* Removes the default button border */
+    border-radius: 5px; /* Adds rounded corners */
+    cursor: pointer; /* Adds a pointer cursor on hover */
+    font-size: 16px; /* Sets the font size */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Ensures text alignment */
+}
+
+.add-patient-btn3 {
+    background-color: #28a745;
+    left: 65%;
+    width: 150px;
+    height: 36px;
+    color: white; /* Ensures the text color is white */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    border: none; /* Removes the default button border */
+    border-radius: 5px; /* Adds rounded corners */
+    cursor: pointer; /* Adds a pointer cursor on hover */
+    font-size: 16px; /* Sets the font size */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Ensures text alignment */
+}
+
+
+.search-btn {
+    background-color: #00bcd4;
+    border-radius: 5px;
+    width: 60px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.search-btn img {
+    width: 50%;
+    height: 50%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Use separate borders */
+    border-spacing: 0 10px; /* Adds space between rows */
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+td {
+    color: #555;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px; /* Adjust as needed */
+
+}
+
+.action-btn:hover {
+    color: #0056b3;
+}
+
+.analysis-container {
+    margin-top: 40px;
+}
+
+.analysis-container div {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+
+
+
+
+#patient-id {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+
+}
+
+
+.vision-test {
+    background-color: white;
+    padding: 20px;
+    width: 70%;
+}
+
+
+.left {
+    width: 40%;
+    flex-direction: column;
+    
+    padding: 20px;
+    width: 96.5%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.form-section {
+    
+    padding: 20px; /* Adds some padding around the form */
+    border-radius: 10px; /* Optional: rounds the corners of the form */
+    color:black; /* Optional: changes text color to be more readable on the background */
+}
+
+.left .icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+#nom { top: 0%; left: 0%; width: 80%; }
+#age { top: 0%; left: 0%; width: 30%; }
+#poste { top: 0%; left: 0%; width: 80%; }
+#antecedents { top: 0%; left: 25%; width: 80%; }
+#id { top: 50%; left: 0%; width: 8%; }
+
+#tests {
+    width: 800px;
+    height: 1500px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+
+    border-radius: 5px;
+
+}
+.btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+#container1{
+    width: 100%; /* Make sure the container takes full width */
+    height: 50%;
+    background-color: #f0f0f0; /* Optional: Add a background color to see the container */
+    padding: 20px; /* Optional: Add some padding around the content */
+    align-items: flex-start;
+    position: relative;
+
+    
+
+}
+.container {
+    display: flex;
+    background-color: #fff;
+    width: 950px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    left: 415px;
+    bottom: 468px;
+
+
+    align-items: flex-start;
+    padding: 20px;
+    
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10%; /* Adjust the gap between the fields as needed */
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.form-group label {
+    
+    margin: 10px;
+    /*display: flex;*/
+
+    align-items: center;
+}
+
+.form-group input {
+    margin-left: 0px;
+}
+.form-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    border-color: #00bcd4;
+    outline: none;
+}
+
+.additionalSection {
+    flex: 1; /* Adjusts width */
+    padding: 10px;
+    background-color: #e9e9e9; /* Optional: for better visibility */
+}
+.pdf-viewer {
+    width: 950px;
+    height: 600px; /* Adjust height as needed */
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.pdf-container {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: white;
+    overflow: auto;
+}
+.controls {
+    margin-right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#patientInfoDiv {
+    text-align: left;
+    padding: 10px;
+    margin: 68px;
+    flex: 1;
+}
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+    
+}
+
+.pdf-viewer {
+    width: 1050px;
+    height: 1000px; /* Adjust height as needed */
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.pdf-container {
+    width: 1050px;
+    height: 1550px; 
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: white;
+    overflow: auto;
+    justify-content: space-between;
+    border-radius: 15px;
+    position: relative;
+    left: 8%;
+}
+
+a#username-link {
+    color: inherit; /* Ensure the link inherits the color of the surrounding text */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+a#username-link:hover {
+    text-decoration: underline; /* Add underline on hover for better UX */
+}
+#datetime {
+    margin-right: 10px;
+    font-weight: bold;
+}
+/* Table */
+/* Table styling */
+#patientTable {
+    width: 100%;
+    /*border-collapse: separate; /* Use separate borders */
+    border-spacing: 0 0px; /* Adds space between rows */
+    background-color: #f8f8f8;
+}
+
+#patientTable th,
+#patientTable td {
+    padding: 10px;
+    text-align: left;
+}
+
+#patientTable th {
+    background-color: #01b5d9;
+    color: white;
+}
+
+#patientTable tr {
+    background-color: white;
+
+}
+
+#patientTable tr:not(:last-child) {
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for row separation */
+    
+}
+
+#patientTable td a {
+    color: #2e7fe9;
+    margin-right: 10px; /* Space between icons */
+
+}
+
+#patientTable td a:last-child {
+    margin-right: 0;
+}

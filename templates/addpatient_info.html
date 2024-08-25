@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre de Diagnostic Médical Ibn Sina</title>
+    <link rel="stylesheet" href="styles/addpationt_pdf.css">
+    <link rel="icon" href="icons/icon.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <img src="icons/icon.png" alt="Logo" class="logo">
+        <h1>EURL. Centre de Diagnostic Médical Ibn Sina</h1>
+    </div>
+</header>
+
+<main>
+    <div class="user-info">
+        <label for="username">Username:</label>
+        <a href="/userprofile" id="username-link"><span id="username">Babziz Mostafa</span></a>
+        <span id="datetime"></span>
+        <input type="text" id="patient-id" placeholder="Enter ID / Nom prenom" >
+        <button class="search-btn" onclick="searchPatient()"><img src="icons/search-icon.png" alt="Search"></button>
+        <button class="add-patient-btn" onclick="location.href='/addpatient_info'">Ajouter Un Patient</button>
+        <button class="add-patient-btn1" onclick="location.href='/'">Disconnexion</button>
+    </div>
+</main>
+
+<main>
+    <div class="user-info1">
+        <label for="patient_info_test">Patient information</label>
+    </div>
+</main>
+
+    <main>
+        <div class="left">
+            <form id="patientForm" class="form-section" action="/addpatient_info" method="post">
+                <div class="form-group">
+                    <label for="nom">Nom & Prénom:  
+                        <input type="text" id="nom" name="nom" required> 
+                    </label> 
+                    <label for="age">Age:  
+                        <input type="number" id="age" name="age" required> 
+                    </label>
+                    <label for="corr">Correction: 
+                        <select name="correction" id="correction">
+                            <option value="no">Non</option>
+                            <option value="yes">Oui</option>
+                        </select> 
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="job">Poste de Travail:  
+                        <input type="text" id="job" name="job"> 
+                    </label>
+                    <label for="medical_antidotes">Antécédents Médicaux:  
+                        <input type="text" id="medical_antidotes" name="medical_antidotes"> 
+                    </label>
+                </div>
+            </form>
+        </div>
+    </main>
+    <main>
+        <div class="user-info">
+            <button class="add-patient-btn2" type="button" id="previous-btn">Previous</button>
+            <button class="add-patient-btn3" type="button" id="next-btn">Next</button>
+        </div>
+    </main>
+
+
+<script src="scripts/send_data_info.js"></script>
+
+<script src="scripts/pages_links.js"></script>
+
+<script src="scripts/pationtscript.js"></script>
+
+<script src="scripts/search_page.js"></script> 
+
+<script src="scripts/search_patient_tab.js"></script>
+
+<script>
+    document.getElementById('previous-btn').addEventListener('click', function() {
+        window.location.href = '/userprofile'; // Update this path if necessary
+    });
+</script>
+
+<script src="scripts/search_script.js"></script>
+
+</body>
+</html>

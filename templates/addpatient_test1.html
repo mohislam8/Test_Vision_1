@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre de Diagnostic Médical Ibn Sina</title>
+    <link rel="stylesheet" href="/styles/addpationt_test1.css">
+    <link rel="icon" href="icons/icon.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script> 
+</head>
+
+<body>
+<header>
+    <div class="logo-container">
+        <img src="icons/icon.png" alt="Logo" class="logo">
+        <h1>EURL. Centre de Diagnostic Médical Ibn Sina</h1>
+    </div>
+</header>
+
+<main>
+    <div class="user-info">
+        <label for="username">Username:</label>
+        <a href="/userprofile" id="username-link"><span id="username">Babziz Mostafa</span></a>
+        <span id="datetime"></span>
+        <input type="text" id="patient-id" placeholder="Enter ID / Nom prenom" >
+        <button class="search-btn" onclick="searchPatient()"><img src="icons/search-icon.png" alt="Search"></button>
+        <button class="add-patient-btn" onclick="location.href='/addpatient_info'">Ajouter Un Patient</button>
+        <button class="add-patient-btn1" onclick="location.href='/'">Disconnexion</button>
+    </div>
+</main>
+
+<main>
+    <div class="user-info1">
+        <label for="patient_info_test">Vision de loin</label>
+    </div>
+</main>
+
+<main>
+    <div class="left">
+        
+        <form id="patientForm" class="form-section">
+            <div class="form-group1">
+                <table>
+                    <tr>
+                        <td><b>01 Acuité OD</b>....</td>
+                        <td>
+
+                            <div class="checkbox-sequence">
+                                <label>
+                                    2
+                                    <input type="checkbox" class="single-checkbox1" data-chifer="2">
+                                </label>
+                                <label>
+                                    4
+                                    <input type="checkbox" class="single-checkbox1" data-chifer="4">
+                                </label>
+                                <label>
+                                    6
+                                    <input type="checkbox" class="single-checkbox1" data-chifer="6">
+                                </label>
+                                <label>
+                                    8
+                                    <input type="checkbox" class="single-checkbox1" data-chifer="8">
+                                </label>
+                                <label>
+                                    10
+                                    <input type="checkbox" class="single-checkbox1" data-chifer="10">
+                                </label>
+                                <label>
+                                    12
+                                    <input type="checkbox" class="single-checkbox1" data-chifer="12">
+                                </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox-container">
+                                <label class="checkbox1">
+                                    1
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox2" data-chifer="1">
+                                </label>
+                                <label class="checkbox2">
+                                    2
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox2" data-chifer="2">
+                                </label>
+                                <label class="checkbox3">
+                                    3
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox2" data-chifer="3">
+                                </label>
+                                <label class="checkbox4">
+                                    4
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox2" data-chifer="4">
+                                </label>
+                                <label class="checkbox5">
+                                    5
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox2" data-chifer="5">
+                                </label>
+                                <label class="checkbox6">
+                                    6
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox2" data-chifer="6">
+                                </label>
+                                <label class="checkbox7">
+                                    7
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox2" data-chifer="7">
+                                </label>
+                            </div>
+                        </td>
+                        <td><b>hyper</b>....................</td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <form id="patientForm" class="form-section">
+            <div class="form-group1">
+                <table>
+                    <tr>
+                        <td><b>02 Acuité OG</b>....</td>
+                        <td>
+
+                            <div class="checkbox-sequence" id="acuiteOG">
+                                <label>
+                                    2
+                                    <input type="checkbox" class="single-checkbox3" data-chifer="2">
+                                </label>
+                                <label>
+                                    4
+                                    <input type="checkbox" class="single-checkbox3" data-chifer="4">
+                                </label>
+                                <label>
+                                    6
+                                    <input type="checkbox" class="single-checkbox3" data-chifer="6">
+                                </label>
+                                <label>
+                                    8
+                                    <input type="checkbox" class="single-checkbox3" data-chifer="8">
+                                </label>
+                                <label>
+                                    10
+                                    <input type="checkbox" class="single-checkbox3" data-chifer="10">
+                                </label>
+                                <label>
+                                    12
+                                    <input type="checkbox" class="single-checkbox3" data-chifer="12">
+                                </label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="checkbox-container">
+                                <label class="checkbox1">
+                                    1
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox4" data-chifer="1">
+                                </label>
+                                <label class="checkbox2">
+                                    2
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox4" data-chifer="2">
+                                </label>
+                                <label class="checkbox3">
+                                    3
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox4" data-chifer="3">
+                                </label>
+                                <label class="checkbox4">
+                                    4
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox4" data-chifer="4">
+                                </label>
+                                <label class="checkbox5">
+                                    5
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox4" data-chifer="5">
+                                </label>
+                                <label class="checkbox6">
+                                    6
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox4" data-chifer="6">
+                                </label>
+                                <label class="checkbox7">
+                                    7
+                                    <input type="checkbox" name="checkbox-sequence" class="single-checkbox4" data-chifer="7">
+                                </label>
+                            </div>
+                        </td>
+                        <td><b>hyper</b>....................</td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <form id="patientForm" class="form-section">
+            <div class="form-group1">
+                <table>
+                    <tr>
+                        <td ><b>03 Acuité binoculaire</b></td>
+                        <td>
+
+                            <div class="checkbox-sequence" id="acuiteBino">
+                                <label>
+                                    2
+                                    <input type="checkbox" class="single-checkbox5" data-chifer="2">
+                                </label>
+                                <label>
+                                    4
+                                    <input type="checkbox" class="single-checkbox5" data-chifer="4">
+                                </label>
+                                <label>
+                                    6
+                                    <input type="checkbox" class="single-checkbox5" data-chifer="6">
+                                </label>
+                                <label>
+                                    8
+                                    <input type="checkbox" class="single-checkbox5" data-chifer="8">
+                                </label>
+                                <label>
+                                    10
+                                    <input type="checkbox" class="single-checkbox5" data-chifer="10">
+                                </label>
+                                <label>
+                                    12
+                                    <input type="checkbox" class="single-checkbox5" data-chifer="12">
+                                </label>
+                            </div>
+                        </td>
+
+                        <td>
+                            <p><b>....................................................................................................................................</b> </p>
+                           </td>
+                        
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <form id="patientForm" class="form-section">
+            <div class="form-group1">
+                <table>
+                    <tr>
+                        <td><b>03 Acuité binoculaire</b></td>
+                        <td>
+                            <table id="characterTable1">
+                                <tr>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="col1" id="A1_1" data-chifer="1A1" class="tab1"><label for="A1_1">A</label></td>
+                                    <td><input type="radio" name="col2" id="A2_1" data-chifer="2A1" class="tab1"><label for="A2_1">A</label></td>
+                                    <td><input type="radio" name="col3" id="A3_1" data-chifer="3A1" class="tab1"><label for="A3_1">A</label></td>
+                                    <td><input type="radio" name="col4" id="A4_1" data-chifer="4A1" class="tab1"><label for="A4_1">A</label></td>
+                                    <td><input type="radio" name="col5" id="A5_1" data-chifer="5A1" class="tab1"><label for="A5_1">A</label></td>
+                                    <td><input type="radio" name="col6" id="A6_1" data-chifer="6A1" class="tab1"><label for="A6_1">A</label></td>
+                                    <td><input type="radio" name="col7" id="A7_1" data-chifer="7A1" class="tab1"><label for="A7_1">A</label></td>
+                                    <td><input type="radio" name="col8" id="A8_1" data-chifer="8A1" class="tab1"><label for="A8_1">A</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="col1" id="B1_1" data-chifer="1B1" class="tab1"><label for="B1_1">B</label></td>
+                                    <td><input type="radio" name="col2" id="B2_1" data-chifer="2B1" class="tab1"><label for="B2_1">B</label></td>
+                                    <td><input type="radio" name="col3" id="B3_1" data-chifer="3B1" class="tab1"><label for="B3_1">B</label></td>
+                                    <td><input type="radio" name="col4" id="B4_1" data-chifer="4B1" class="tab1"><label for="B4_1">B</label></td>
+                                    <td><input type="radio" name="col5" id="B5_1" data-chifer="5B1" class="tab1"><label for="B5_1">B</label></td>
+                                    <td><input type="radio" name="col6" id="B6_1" data-chifer="6B1" class="tab1"><label for="B6_1">B</label></td>
+                                    <td><input type="radio" name="col7" id="B7_1" data-chifer="7B1" class="tab1"><label for="B7_1">B</label></td>
+                                    <td><input type="radio" name="col8" id="B8_1" data-chifer="8B1" class="tab1"><label for="B8_1">B</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="col1" id="C1_1" data-chifer="1C1" class="tab1"><label for="C1_1">C</label></td>
+                                    <td><input type="radio" name="col2" id="C2_1" data-chifer="2C1" class="tab1"><label for="C2_1">C</label></td>
+                                    <td><input type="radio" name="col3" id="C3_1" data-chifer="3C1" class="tab1"><label for="C3_1">C</label></td>
+                                    <td><input type="radio" name="col4" id="C4_1" data-chifer="4C1" class="tab1"><label for="C4_1">C</label></td>
+                                    <td><input type="radio" name="col5" id="C5_1" data-chifer="5C1" class="tab1"><label for="C5_1">C</label></td>
+                                    <td><input type="radio" name="col6" id="C6_1" data-chifer="6C1" class="tab1"><label for="C6_1">C</label></td>
+                                    <td><input type="radio" name="col7" id="C7_1" data-chifer="7C1" class="tab1"><label for="C7_1">C</label></td>
+                                    <td><input type="radio" name="col8" id="C8_1" data-chifer="8C1" class="tab1"><label for="C8_1">C</label></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <p><b>Cocher les lettres ou les chiffres correspondants selon le type de l’appareil</b></p>
+                        </td>
+                        <td>
+                            <table id="characterTable2">
+                                <tr>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th>D</th>
+                                    <th>E</th>
+                                    <th>F</th>
+                                    <th>G</th>
+                                    <th>H</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="col1" id="A1_2" data-chifer="1A2" class="tab2"><label for="A1_2">1</label></td>
+                                    <td><input type="radio" name="col2" id="A2_2" data-chifer="2A2" class="tab2"><label for="A2_2">1</label></td>
+                                    <td><input type="radio" name="col3" id="A3_2" data-chifer="3A2" class="tab2"><label for="A3_2">1</label></td>
+                                    <td><input type="radio" name="col4" id="A4_2" data-chifer="4A2" class="tab2"><label for="A4_2">1</label></td>
+                                    <td><input type="radio" name="col5" id="A5_2" data-chifer="5A2" class="tab2"><label for="A5_2">1</label></td>
+                                    <td><input type="radio" name="col6" id="A6_2" data-chifer="6A2" class="tab2"><label for="A6_2">1</label></td>
+                                    <td><input type="radio" name="col7" id="A7_2" data-chifer="7A2" class="tab2"><label for="A7_2">1</label></td>
+                                    <td><input type="radio" name="col8" id="A8_2" data-chifer="8A2" class="tab2"><label for="A8_2">1</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="col1" id="B1_2" data-chifer="1B2" class="tab2"><label for="B1_2">2</label></td>
+                                    <td><input type="radio" name="col2" id="B2_2" data-chifer="2B2" class="tab2"><label for="B2_2">2</label></td>
+                                    <td><input type="radio" name="col3" id="B3_2" data-chifer="3B2" class="tab2"><label for="B3_2">2</label></td>
+                                    <td><input type="radio" name="col4" id="B4_2" data-chifer="4B2" class="tab2"><label for="B4_2">2</label></td>
+                                    <td><input type="radio" name="col5" id="B5_2" data-chifer="5B2" class="tab2"><label for="B5_2">2</label></td>
+                                    <td><input type="radio" name="col6" id="B6_2" data-chifer="6B2" class="tab2"><label for="B6_2">2</label></td>
+                                    <td><input type="radio" name="col7" id="B7_2" data-chifer="7B2" class="tab2"><label for="B7_2">2</label></td>
+                                    <td><input type="radio" name="col8" id="B8_2" data-chifer="8B2" class="tab2"><label for="B8_2">2</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="col1" id="C1_2" data-chifer="1C2" class="tab2"><label for="C1_2">3</label></td>
+                                    <td><input type="radio" name="col2" id="C2_2" data-chifer="2C2" class="tab2"><label for="C2_2">3</label></td>
+                                    <td><input type="radio" name="col3" id="C3_2" data-chifer="3C2" class="tab2"><label for="C3_2">3</label></td>
+                                    <td><input type="radio" name="col4" id="C4_2" data-chifer="4C2" class="tab2"><label for="C4_2">3</label></td>
+                                    <td><input type="radio" name="col5" id="C5_2" data-chifer="5C2" class="tab2"><label for="C5_2">3</label></td>
+                                    <td><input type="radio" name="col6" id="C6_2" data-chifer="6C2" class="tab2"><label for="C6_2">3</label></td>
+                                    <td><input type="radio" name="col7" id="C7_2" data-chifer="7C2" class="tab2"><label for="C7_2">3</label></td>
+                                    <td><input type="radio" name="col8" id="C8_2" data-chifer="8C2" class="tab2"><label for="C8_2">3</label></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        
+        <form id="patientForm" class="form-section">
+            <div class="form-group1">
+                <table>
+                    <tr>
+                        <td><b>04 Duochrome</b>..</td>
+                        <td>
+                            <label for="nom">Remark 1:   </label> 
+                            <input type="text" id="remark_1" name="nom" required>
+                        </td>
+                            <td>
+                                
+                                <div class="container1">
+                                    <div class="diagram">
+                                        <div class="checkbox-container1">
+                                            <input type="checkbox" id="checkV" onclick="toggleCircle('V')" data-chifer="V" class="doch1">
+                                            <label for="checkV">V</label>
+                                        </div>
+                                        <div class="circle-group" id="groupV">
+                                            <div class="circle-container">
+                                                <div class="circle large" id="circle1"></div>
+                                                <input type="checkbox" id="check1" onclick="toggleCircle('circle1')" data-chifer="V1" class="doch1">
+                                            </div>
+                                            <div class="circle-container">
+                                                <div class="circle mid" id="circle2"></div>
+                                                <input type="checkbox" id="check2" onclick="toggleCircle('circle2')" data-chifer="V2" class="doch1">
+                                            </div>
+                                            <div class="circle-container">
+                                                <div class="circle small" id="circle3"></div>
+                                                <input type="checkbox" id="check3" onclick="toggleCircle('circle3')" data-chifer="V3" class="doch1">
+                                            </div>
+                                        </div>
+                                        <div class="circle-group" id="groupR">
+                                            <div class="circle-container">
+                                                <div class="circle large" id="circle4"></div>
+                                                <input type="checkbox" id="check4" onclick="toggleCircle('circle4')" data-chifer="R1" class="doch1">
+                                            </div>
+                                            <div class="circle-container">
+                                                <div class="circle mid" id="circle5"></div>
+                                                <input type="checkbox" id="check5" onclick="toggleCircle('circle5')" data-chifer="R2" class="doch1">
+                                            </div>
+                                            <div class="circle-container">
+                                                <div class="circle small" id="circle6"></div>
+                                                <input type="checkbox" id="check6" onclick="toggleCircle('circle6')" data-chifer="R3" class="doch1">
+                                            </div>
+                                        </div>
+                                        <div class="checkbox-container1">
+                                            <input type="checkbox" id="checkR" onclick="toggleCircle('R')" data-chifer="R" class="doch1">
+                                            <label for="checkR">R</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <label for="nom">Remark 2:   </label> 
+                                <input type="text" id="remark_2" name="nom" required>
+                            </td>    
+                    </tr>
+                </table>   
+            </div>
+        </form> 
+        <form id="patientForm" class="form-section">
+            <div class="form-group1">
+                <table>
+                    <tr>
+                        <td> .......<b>05Phories</b>.........</td>
+                            <td>
+                                <table id="coordinateTable1">
+                                    <thead>
+                                        <tr>
+                                            <th> </th>
+                                            <th>A</th>
+                                            <th>B</th>
+                                            <th>C</th>
+                                            <th>D</th>
+                                            <th>E</th>
+                                            <th>F</th>
+                                            <th>G</th>
+                                            <th>H</th>
+                                            <th>I</th>
+                                            <th>J</th>
+                                            <th>K</th>
+                                            <th>L</th>
+                                            <th>M</th>
+                                            <th>N</th>
+                                            <th>O</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><b>. <b> 1</b></b></td>
+                                            <td><label><input type="radio" name="row1" data-chifer="1A1" class="tab3">1A</label></td>
+                                            <td><label><input type="radio" name="row2" data-chifer="1B1" class="tab3">1B</label></td>
+                                            <td><label><input type="radio" name="row3" data-chifer="1C1" class="tab3">1C</label></td>
+                                            <td><label><input type="radio" name="row4" data-chifer="1D1" class="tab3">1D</label></td>
+                                            <td><label><input type="radio" name="row5" data-chifer="1E1" class="tab3">1E</label></td>
+                                            <td><label><input type="radio" name="row6" data-chifer="1F1" class="tab3">1F</label></td>
+                                            <td><label><input type="radio" name="row7" data-chifer="1G1" class="tab3">1G</label></td>
+                                            <td><label><input type="radio" name="row8" data-chifer="1H1" class="tab3">1H</label></td>
+                                            <td><label><input type="radio" name="row9" data-chifer="1I1" class="tab3">1I</label></td>
+                                            <td><label><input type="radio" name="row10" data-chifer="1J1" class="tab3">1J</label></td>
+                                            <td><label><input type="radio" name="row11" data-chifer="1K1" class="tab3">1K</label></td>
+                                            <td><label><input type="radio" name="row12" data-chifer="1L1" class="tab3">1L</label></td>
+                                            <td><label><input type="radio" name="row13" data-chifer="1M1" class="tab3">1M</label></td>
+                                            <td><label><input type="radio" name="row14" data-chifer="1N1" class="tab3">1N</label></td>
+                                            <td><label><input type="radio" name="row15" data-chifer="1O1" class="tab3">1O</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>. <b> 2</b></td>
+                                            <td><label><input type="radio" name="row1" data-chifer="2A1" class="tab3">2A</label></td>
+                                            <td><label><input type="radio" name="row2" data-chifer="2B1" class="tab3">2B</label></td>
+                                            <td><label><input type="radio" name="row3" data-chifer="2C1" class="tab3">2C</label></td>
+                                            <td><label><input type="radio" name="row4" data-chifer="2D1" class="tab3">2D</label></td>
+                                            <td><label><input type="radio" name="row5" data-chifer="2E1" class="tab3">2E</label></td>
+                                            <td><label><input type="radio" name="row6" data-chifer="2F1" class="tab3">2F</label></td>
+                                            <td><label><input type="radio" name="row7" data-chifer="2G1" class="tab3">2G</label></td>
+                                            <td><label><input type="radio" name="row8" data-chifer="2H1" class="tab3">2H</label></td>
+                                            <td><label><input type="radio" name="row9" data-chifer="2I1" class="tab3">2I</label></td>
+                                            <td><label><input type="radio" name="row10" data-chifer="2J1" class="tab3">2J</label></td>
+                                            <td><label><input type="radio" name="row11" data-chifer="2K1" class="tab3">2K</label></td>
+                                            <td><label><input type="radio" name="row12" data-chifer="2L1" class="tab3">2L</label></td>
+                                            <td><label><input type="radio" name="row13" data-chifer="2M1" class="tab3">2M</label></td>
+                                            <td><label><input type="radio" name="row14" data-chifer="2N1" class="tab3">2N</label></td>
+                                            <td><label><input type="radio" name="row15" data-chifer="2O1" class="tab3">2O</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>. <b> 3</b></td>
+                                            <td><label><input type="radio" name="row1" data-chifer="3A1" class="tab3">3A</label></td>
+                                            <td><label><input type="radio" name="row2" data-chifer="3B1" class="tab3">3B</label></td>
+                                            <td><label><input type="radio" name="row3" data-chifer="3C1" class="tab3">3C</label></td>
+                                            <td><label><input type="radio" name="row4" data-chifer="3D1" class="tab3">3D</label></td>
+                                            <td><label><input type="radio" name="row5" data-chifer="3E1" class="tab3">3E</label></td>
+                                            <td><label><input type="radio" name="row6" data-chifer="3F1" class="tab3">3F</label></td>
+                                            <td><label><input type="radio" name="row7" data-chifer="3G1" class="tab3">3G</label></td>
+                                            <td><label><input type="radio" name="row8" data-chifer="3H1" class="tab3">3H</label></td>
+                                            <td><label><input type="radio" name="row9" data-chifer="3I1" class="tab3">3I</label></td>
+                                            <td><label><input type="radio" name="row10" data-chifer="3J1" class="tab3">3J</label></td>
+                                            <td><label><input type="radio" name="row11" data-chifer="3K1" class="tab3">3K</label></td>
+                                            <td><label><input type="radio" name="row12" data-chifer="3L1" class="tab3">3L</label></td>
+                                            <td><label><input type="radio" name="row13" data-chifer="3M1" class="tab3">3M</label></td>
+                                            <td><label><input type="radio" name="row14" data-chifer="3N1" class="tab3">3N</label></td>
+                                            <td><label><input type="radio" name="row15" data-chifer="3O1" class="tab3">3O</label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <p><b> Coucher la position du point
+                                    dans la grille correspondants
+                                    selon le type de l’appareil</b> </p>
+                            </td>
+
+
+
+
+                    </tr>
+                </table>
+            </div>
+        </form>                            
+
+        <form id="patientForm" class="form-section">
+            <div class="form-group1">
+                <table>
+                    <tr>
+                        <td>......<b>05Phories</b>........</td>            
+                            <td>
+                                <table id="coordinateTable2">
+                                    <thead>
+                                        <tr>
+                                            <th> </th>
+                                            <th>A</th>
+                                            <th>B</th>
+                                            <th>C</th>
+                                            <th>D</th>
+                                            <th>E</th>
+                                            <th>F</th>
+                                            <th>G</th>
+                                            <th>H</th>
+                                            <th>I</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>. <b> 1</b></td>
+                                            <td><label><input type="radio" name="row1" data-chifer="1A2" class="tab4">1A</label></td>
+                                            <td><label><input type="radio" name="row2" data-chifer="1B2" class="tab4">1B</label></td>
+                                            <td><label><input type="radio" name="row3" data-chifer="1C2" class="tab4">1C</label></td>
+                                            <td><label><input type="radio" name="row4" data-chifer="1D2" class="tab4">1D</label></td>
+                                            <td><label><input type="radio" name="row5" data-chifer="1E2" class="tab4">1E</label></td>
+                                            <td><label><input type="radio" name="row6" data-chifer="1F2" class="tab4">1F</label></td>
+                                            <td><label><input type="radio" name="row7" data-chifer="1G2" class="tab4">1G</label></td>
+                                            <td><label><input type="radio" name="row8" data-chifer="1H2" class="tab4">1H</label></td>
+                                            <td><label><input type="radio" name="row9" data-chifer="1I2" class="tab4">1I</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>. <b> 2</b></td>
+                                            <td><label><input type="radio" name="row1" data-chifer="2A2" class="tab4">2A</label></td>
+                                            <td><label><input type="radio" name="row2" data-chifer="2B2" class="tab4">2B</label></td>
+                                            <td><label><input type="radio" name="row3" data-chifer="2C2" class="tab4">2C</label></td>
+                                            <td><label><input type="radio" name="row4" data-chifer="2D2" class="tab4">2D</label></td>
+                                            <td><label><input type="radio" name="row5" data-chifer="2E2" class="tab4">2E</label></td>
+                                            <td><label><input type="radio" name="row6" data-chifer="2F2" class="tab4">2F</label></td>
+                                            <td><label><input type="radio" name="row7" data-chifer="2G2" class="tab4">2G</label></td>
+                                            <td><label><input type="radio" name="row8" data-chifer="2H2" class="tab4">2H</label></td>
+                                            <td><label><input type="radio" name="row9" data-chifer="2I2" class="tab4">2I</label></td>
+                                        
+                                        </tr>
+                                        <tr>
+                                            <td>. <b>3</b></td>
+                                            <td><label><input type="radio" name="row1" data-chifer="3A2" class="tab4">3A</label></td>
+                                            <td><label><input type="radio" name="row2" data-chifer="3B2" class="tab4">3B</label></td>
+                                            <td><label><input type="radio" name="row3" data-chifer="3C2" class="tab4">3C</label></td>
+                                            <td><label><input type="radio" name="row4" data-chifer="3D2" class="tab4">3D</label></td>
+                                            <td><label><input type="radio" name="row5" data-chifer="3E2" class="tab4">3E</label></td>
+                                            <td><label><input type="radio" name="row6" data-chifer="3F2" class="tab4">3F</label></td>
+                                            <td><label><input type="radio" name="row7" data-chifer="3G2" class="tab4">3G</label></td>
+                                            <td><label><input type="radio" name="row8" data-chifer="3H2" class="tab4">3H</label></td>
+                                            <td><label><input type="radio" name="row9" data-chifer="3I2" class="tab4">3I</label></td> 
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <p><b> .....................................................................................................</b> </p>
+                            </td>
+                    </tr>
+                </table>
+            </div>
+        </form>   
+        
+        <form id="patientForm" class="form-section">
+            <div class="form-group1">
+                <table>
+                    <tr>
+                        <td><b>06 Vision des couleurs</b></td>
+                            <td>
+                                <table id="coordinateTable5">
+                                    <tbody>
+                                        <tr>
+                                            <td><label><input type="checkbox" data-chifer="01" class="r1"> 57</label></td>
+                                            <td><label><input type="checkbox" data-chifer="11" class="r1"> 74</label></td>
+                                            <td><label><input type="checkbox" data-chifer="21" class="r1"> 97</label></td>
+                                            <td><label><input type="checkbox" data-chifer="31" class="r1"> 35</label></td>
+                                            <td><label><input type="checkbox" data-chifer="41" class="r1"> 21</label></td>
+                                            <td><label><input type="checkbox" data-chifer="51" class="r1"> non</label></td>
+                                            <td><label><input type="checkbox" data-chifer="61" class="r1"> 57</label></td>
+                                            <td><label><input type="checkbox" data-chifer="71" class="r1"> 74</label></td>
+                                            <td><label><input type="checkbox" data-chifer="81" class="r1"> 35</label></td>
+                                            <td><label><input type="checkbox" data-chifer="91" class="r1"> 21</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="checkbox" data-chifer="02" class="r2"> 16</label></td>
+                                            <td><label><input type="checkbox" data-chifer="12" class="r2"> non</label></td>
+                                            <td><label><input type="checkbox" data-chifer="22" class="r2"> 96</label></td>
+                                            <td><label><input type="checkbox" data-chifer="32" class="r2"> non</label></td>
+                                            <td><label><input type="checkbox" data-chifer="42" class="r2"> 45</label></td>
+                                            <td><label><input type="checkbox" data-chifer="52" class="r2"> 9/6</label></td>
+                                            <td><label><input type="checkbox" data-chifer="62" class="r2"> 94</label></td>
+                                            <td><label><input type="checkbox" data-chifer="72" class="r2"> non</label></td>
+                                            <td><label><input type="checkbox" data-chifer="82" class="r2"> 9/6</label></td>
+                                            <td><label><input type="checkbox" data-chifer="92" class="r2"> 45</label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                    </tr>
+                </table>
+            </div>
+        </form>            
+      
+    </div>
+</main>
+
+<main>
+    <div class="user-info">
+        <button class="add-patient-btn2" type="button" id="previous-btn">Previous</button>
+        <button class="add-patient-btn3" type="button" id="next-btn">Next</button>
+    </div>
+</main>    
+
+<script src="scripts/Duochrome04.js"></script>
+
+<script src="scripts/tab_char_1.js"></script>
+<script src="scripts/tab_char_2.js"></script>
+<script src="scripts/tab_cord_1.js"></script>
+<script src="scripts/tab_cord_2.js"></script> 
+
+<script src="scripts/pages_links.js"></script>
+
+<script src="scripts/pationtscript.js"></script>
+<script src="scripts/tab.js"></script>
+<script src="scripts/last_tab.js"></script>
+
+<script src="scripts/check_s_1.js"></script> 
+
+<script src="scripts/send_data1.js"></script>
+
+<script src="scripts/search_page.js"></script> 
+
+<script src="scripts/pages_links.js"></script>
+
+<script src="scripts/search_patient_tab.js"></script>
+
+<script src="scripts\search_tab_.js"></script>
+
+<script src="scripts\search_script.js"></script>
+
+
+<style>
+    /* Style for selected cells */
+    .selected {
+        background-color: #4CAF50; /* Green background for selected */
+        color: white; /* White text */
+        border-radius: 4px; /* Rounded corners */
+    }
+    
+    /* Optional: Style for the label if needed */
+    .selected + label {
+        background-color: #4CAF50; /* Green background for selected */
+        color: white; /* White text */
+        border-radius: 4px; /* Rounded corners */
+        padding: 5px; /* Padding for better visibility */
+        font-weight: bold; /* Bold text */
+    }
+    
+</style>
+
+<script>
+    document.getElementById('previous-btn').addEventListener('click', function() {
+        window.location.href = '/addpatient_info'; // Update this path if necessary
+    });
+</script>  
+</body>
+</html>

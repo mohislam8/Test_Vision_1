@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre de Diagnostic Médical Ibn Sina</title>
+    <link rel="stylesheet" href="styles/addpationt_test3.css">
+    <link rel="icon" href="icons/icon.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <img src="icons/icon.png" alt="Logo" class="logo">
+        <h1>EURL. Centre de Diagnostic Médical Ibn Sina</h1>
+    </div>
+</header>
+<main>
+    <div class="user-info">
+        <label for="username">Username:</label>
+        <a href="/userprofile" id="username-link"><span id="username">Babziz Mostafa</span></a>
+        <span id="datetime"></span>
+        <input type="text" id="patient-id" placeholder="Enter ID / Nom prenom" >
+        <button class="search-btn" onclick="searchPatient()"><img src="icons/search-icon.png" alt="Search"></button>
+        <button class="add-patient-btn" onclick="location.href='/addpatient_info'">Ajouter Un Patient</button>
+        <button class="add-patient-btn1" onclick="location.href='/'">Disconnexion</button>
+    </div>
+</main>
+
+<main>
+    <div class="user-info1">
+        <label for="patient_info_test">Champ visuel horizontal</label>
+    </div>
+</main>
+
+<main>
+    <div class="left">    
+        <form id="patientForm" class="form-section">
+            <div class="form-group">
+                <label for="nom">Remark 1:   </label> 
+                <input type="text" id="remark_5" name="nom" required>
+                <label for="age">Remark 2:   </label>
+                <input type="text" id="remark_6" name="age" required>
+            </div>
+        </form>
+    </div>
+</main>
+
+<main>
+    <div class="user-info1">
+        <label for="patient_info_test">Interpretation</label>
+    </div>
+</main>
+
+<main>
+    <div class="left">   
+        <form id="patientForm" class="form-section">
+            <div class="form-group">
+                <label for="nom">Interpretation:   </label> 
+                <textarea id="paragraphText" name="paragraph_text" cols="450" rows="4" ></textarea>
+            </div>          
+        </form>
+    </div>
+</main>
+
+<main>
+    <div class="user-info" id="test3Form">
+        <button class="add-patient-btn2" type="button" id="previous-btn">Previous</button>
+        <button class="add-patient-btn3" type="button" id="next-btn">Next</button>
+    </div>
+</main>    
+
+<script src="scripts/pages_links.js"></script>
+
+<script src="scripts/pationtscript.js"></script>
+
+<script src="scripts/send_data3.js"></script>
+
+<script src="scripts/process_pdf.js"> </script>
+
+<script src="scripts/generat_pdf.js"></script>
+
+<script src="scripts/search_page.js"></script> 
+
+<script src="scripts/search_patient_tab.js"></script>
+
+<script src="scripts\search_tab_.js"></script>
+
+<script src="scripts\search_script.js"></script>
+
+<script>
+    document.getElementById('previous-btn').addEventListener('click', function() {
+        window.location.href = '/addpatient_test2'; // Update this path if necessary
+    });
+</script>    
+
+</body>
+</html>

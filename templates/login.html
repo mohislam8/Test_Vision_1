@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles/loginstyles.css">
+    <link rel="icon" href="icons/icon.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="icons/icon.png" alt="Eye Icon" class="icon">
+        </div>
+        <div class="right">
+            <form class="login-form" action="/" method="post">
+                <label for="username">Utilisateur</label>
+                <input type="text" id="username" name="username" placeholder="...">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="...">
+                <button type="submit" value="submit">se connecter</button>
+                <a href="#" class="forgot-password">Mot de passe oublié?</a>
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
+            </form>
+        </div>
+    </div>    
+</body>
+</html>

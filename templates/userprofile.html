@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre de Diagnostic Médical Ibn Sina</title>
+    <link rel="stylesheet" href="styles/userprofile.css">
+    <link rel="icon" href="icons/icon.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>   
+</head>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="icons/icon.png" alt="Logo" class="logo">
+        <h1>EURL. Centre de Diagnostic Médical Ibn Sina</h1>
+    </div>
+</header>
+
+<main>
+    <div class="user-info">
+        <label for="username">Username:</label>
+        <a href="userprofile" id="username-link"><span id="username">Babziz Mostafa</span></a>        
+        <span id="datetime"></span>
+        <input type="text" id="patient-id" placeholder="Enter ID / Nom prenom" >
+        <button class="search-btn" onclick="searchPatient()"><img src="icons/search-icon.png" alt="Search"></button>
+        <button class="add-patient-btn" onclick="location.href='/addpatient_info'">Ajouter Un Patient</button>
+        <button class="add-patient-btn1" onclick="location.href='/'">Disconnexion</button>
+    </div>
+</main>
+
+<main>
+<main>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">     
+    <table id="patientTable">
+        <thead>
+            <tr>
+                <th>N</th>
+                <th>Nom et Prénom</th>
+                <th>Date de Création</th>
+                <th>Form Type </th>
+                <th>ID</th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+            </tr>
+            <tbody>
+    </table>
+</main>
+</main>
+    
+</main> 
+
+<script src="scripts/user_tab.js"></script>
+
+<script src="scripts/search_tab_.js"></script>
+
+<script src="scripts/search_script.js"></script>
+
+<script src="scripts/userprofile_script.js"></script>
+
+
+<style>
+    /* Button styling */
+    #close-modal-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    /* Center the button container */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px; /* Adjust height as needed */
+    }
+    /* Button hover effect */
+    #close-modal-btn:hover {
+        background-color: #0056b3;
+    }
+    /* Base button styling */
+    .icon-btn {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Individual button colors */
+    .edit-btn {
+        background-color: #28a745; /* Green */
+    }
+
+    .view-btn {
+        background-color: #17a2b8; /* Blue */
+    }
+
+    .remove-btn {
+        background-color: #dc3545; /* Red */
+    }
+
+    .pdf-btn {
+        background-color: #ff0000; /* Red for PDF */
+    }
+
+    /* Hover effects for buttons */
+    .icon-btn:hover {
+        opacity: 0.8;
+    }
+
+</style>    
+</body>
+</html>

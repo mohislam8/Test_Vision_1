@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height:60px;
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#controlContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+#username {
+    background-color: #e0f7fa;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#datetime {
+    margin-left: 10px;
+}
+
+#patient-id {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img {
+    width: 25px;
+    height: 25px;
+}
+
+button:hover {
+    background-color: #0097a7;
+}
+.add-patient-btn {
+    width: 200px;
+    height: 36px;
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+td {
+    color: #555;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.action-btn:hover {
+    color: #0056b3;
+}
+
+.analysis-container {
+    margin-top: 40px;
+}
+
+.analysis-container div {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.add-patient-btn1 {
+    width: 100px;
+    height: 36px;
+    background-color: #487175;
+}
+
